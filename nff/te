@@ -1,0 +1,18 @@
+class Converter1(tk.Tk):
+    def __init__(self):
+        tk.Tk.__init__(self)
+        self.entry = tk.Entry(self)
+        self.variable = StringVar()
+        self.variable.set("Miles to Kilometers") # default dropdown menu value
+        self.menu = tk.OptionMenu(self, variable, "Miles to Kilometers", "Kilometers to Miles")
+        self.button = tk.Button(self, text="Convert!", command=self.convertMK)
+        self.button.pack()
+        self.menu.pack()
+        self.button.pack()
+        self.entry.pack()
+
+    def convtertMK(self): # converts the miles and kilometers using the dropdown menu
+        if var.get() == "Miles to Kilometers":
+            print(int(self.entry.get()) * 1.6093)
+        else:
+            print(int(self.entry.get()) / 1.6093)
