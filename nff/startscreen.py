@@ -29,11 +29,14 @@ class StartScreen:
           self.window.title('MaxMaster LOgistics Records')
 
           Calendar(self.startframe).place(x = 1110,y=70)
+          
 
           manbtn = tkinter.Button(self.startframe,text ='<<  Manage Trucks >>',height= 4,command = self.manageTrucks,
-          width = 44,bg = 'white',fg = 'grey',font = ('callibri',10)).place(x = 500,y=300)
+          width = 44,bg = 'white',fg = 'orange',font = ('callibri',10)).place(x = 500,y=200)
           logbtn = tkinter.Button(self.startframe,text ='<<  Log Truck  >>',height= 4,command = self.log,
-          width = 44,bg ='grey',fg = 'white',font = ('callibri',10)).place(x = 500,y=450)
+          width = 44,bg ='grey',fg = 'white',font = ('callibri',10)).place(x = 500,y=350)
+          accbtn = tkinter.Button(self.startframe,text =' $ Accounts $  ',height= 4,command = self.account,
+          width = 44,bg ='green',fg = 'white',font = ('callibri',10)).place(x = 500,y=500)
 
           self.startframe.pack(fill = 'both',expand = True)
           self.window.mainloop()
@@ -49,3 +52,7 @@ class StartScreen:
       def log(self):
           self.nextScreen()
           nff.MaxMaster_log(self.window)
+      
+      def account(self):
+          self.nextScreen()
+

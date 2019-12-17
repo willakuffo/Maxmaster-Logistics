@@ -90,9 +90,9 @@ class Manager:
             cv2.waitKey(5)
 
 
-            #truckimage = ImageTk.PhotoImage(Image.open(image))
-            #print(image,truckimage)
-            #tkinter.Label(bglabel,image = truckimage).place(x = 0,y= 0)
+            truckimage = ImageTk.PhotoImage(Image.open(image))
+            print(image,truckimage)
+            tkinter.Label(bglabel,image = truckimage).place(x = 40,y= 40)
 
 
 
